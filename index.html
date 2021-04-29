@@ -24,15 +24,15 @@
         //         console.log(response)
         //     });
 
-            FB.login(function(response) { console.log('lolo', response)
-                if (response.authResponse) {                
-                FB.api('/me', function(response) {console.log('lolo', response)
+            // FB.login(function(response) { console.log('lolo', response)
+            //     if (response.authResponse) {                
+            //     FB.api('/me', function(response) {console.log('lolo', response)
                 
-                });
-                } 
-                FB.api('/me', {fields: 'last_name'}, function(response) {
-                    console.log('lolo11', response)
-                });
+            //     });
+            //     } 
+            //     FB.api('/me', {fields: 'last_name'}, function(response) {
+            //         console.log('lolo11', response)
+            //     });
                 // FB.api('/me/feed','post', { message: 'body' }, function(response) {
                 //     console.log('lolo22', response)
                 // });
@@ -51,13 +51,21 @@
                 // access_token : pageAccessToken
                 // });
 
-                FB.getLoginStatus(function(response) {
-                    statusChangeCallback(response);
-                    console.log(response)
-                });
-            });
+                // FB.getLoginStatus(function(response) {
+                //     statusChangeCallback(response);
+                //     console.log(response)
+                // });
 
 
+
+
+
+
+            // });
+
+FB.login(function(response) {console.log('ahah')
+  // handle the response
+}, {scope: 'public_profile,email'});
 
 
 
