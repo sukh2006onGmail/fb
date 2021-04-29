@@ -33,8 +33,26 @@
                 FB.api('/me', {fields: 'last_name'}, function(response) {
                     console.log('lolo11', response)
                 });
-                FB.api('/me/feed','post', { message: 'body' }, function(response) {
-                    console.log('lolo22', response)
+                // FB.api('/me/feed','post', { message: 'body' }, function(response) {
+                //     console.log('lolo22', response)
+                // });
+                //delete
+                // var postId = '1234567890';
+                //     FB.api(postId, 'delete', function(response) {
+                //     if (!response || response.error) {
+                //         alert('Error occured');
+                //     } else {
+                //         alert('Post was deleted');
+                //     }
+                //     });
+                //Reading a Page's messages
+                // var pageAccessToken = '1234567890|faketoken';
+                // FB.api('/me/conversations', {
+                // access_token : pageAccessToken
+                // });
+
+                FB.getLoginStatus(function(response) {
+                    statusChangeCallback(response);
                 });
             });
 
